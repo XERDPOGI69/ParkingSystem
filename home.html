@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <link href="/asset/css/homepage.css" rel="stylesheet">
+    </head>
+    <body>
+     <div class="navbar">
+        <div class="nav">
+            <ul>
+        <li for="check" id="menu" class="open-menu" ><i class="fas fa-bars"></i></li>
+        <li for="check" id="menu" class="close-menu" style="display: none; justify-content: left;"><i class="fas fa-bars"></i><h1>Parking System</h1></li>        
+        <li class="btn-navbar" ><i class="fa-solid fa-house"></i><h1 id="home"></h1> </li>
+        <li class="btn-navbar" ><i class="fa-regular fa-square-plus"></i> <h1 id="create"></h1> </li>
+        <li class="btn-navbar" ><i class="fa-solid fa-table"></i> <h1 id="data"></h1> </li>
+        <li class="btn-navbar" ><i class="fa-solid fa-check-to-slot"></i> <h1 id="slot"></h1> </li>
+        <li class="btn-navbar" ><i class="fa-solid fa-gear"></i> <h1 id="settings"></h1> </li>
+        </ul>
+    </div>
+     </div>
+     <script>
+
+            
+            const openMenuButton = document.querySelector('.close-menu');
+            const closeMenuButton = document.querySelector('.open-menu');
+            const navb = document.querySelector('.navbar');
+            const nav = document.querySelector('.nav');
+            const btnNavbarElements = document.querySelectorAll('.btn-navbar');
+          
+
+openMenuButton.addEventListener('click', () => {
+  openMenuButton.style.display = 'none'; 
+  closeMenuButton.style.display = 'flex'; 
+  navb.style.width = "80px";
+  nav.style.width = "80px";
+  home.textContent = "";
+  create.textContent = "";
+  data.textContent = "";
+  slot.textContent = "";
+  settings.textContent = "";
+  btnNavbarElements.forEach((btn) => {
+    btn.style.justifyContent = 'center';
+  });
+
+ 
+
+});
+
+
+closeMenuButton.addEventListener('click', () => {
+  closeMenuButton.style.display = 'none'; 
+  openMenuButton.style.display = 'flex'; 
+  home.textContent = "Home";
+  create.textContent = "Create";
+  data.textContent = "Data";
+  slot.textContent = "Slot";
+  settings.textContent = "Settings";
+  navb.style.width = "300px";
+  nav.style.width = "300px";
+  btnNavbarElements.forEach((btn) => {
+    btn.style.justifyContent = 'start';
+  });
+
+
+});
+
+     </script>
+     <script src="https://kit.fontawesome.com/564967ff08.js" crossorigin="anonymous"></script>
+    </body>
+</html>

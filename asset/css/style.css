@@ -1,0 +1,140 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+ }
+ 
+ .login-container {
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(9, 83, 2, 0.3) 5px 5px, rgba(9, 83, 2, 0.2) 10px 10px;
+ }
+
+ 
+ 
+ .login-header {
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  background-color: #418434da;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  width: 100%;
+ }
+ 
+ .login-form {
+  padding: 20px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 70%;
+ }
+ 
+ .form-group {
+  display: flex;
+  position: relative;
+  justify-content: center;
+ }
+ 
+ .form-group label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #244a1d;
+  font-weight: BOLD;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+ }
+ 
+ .form-group input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  color: #163f0f;
+  border: none;
+    border-bottom: 2px solid #244a1d;
+  font-weight: bold;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: transparent;
+  
+ }
+ 
+ .form-group input:focus + label,
+ .form-group input:valid + label {
+  top: -17px;
+  font-size: 16px;
+  font-weight: BOLDER;
+  color: #244a1d;
+  
+ }
+ 
+ 
+ .btn-login{
+  width: 200px;
+    height: 50px;
+    border-radius: 6% / 30%;
+    background-color: #36662d;
+    border: 0px solid;
+    color: #f4f4f4;
+    font-size: 20px;
+ }
+
+ .btn-login:hover{
+  background-color: #163f0f;
+ }
+
+ 
+ 
+ .fa-eye,
+ .fa-eye-slash {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+ }
+ .fa-circle-user{
+  height: 10px;
+  position: relative;
+  top: 10px;
+  color: #163f0f;
+  
+ }
+ 
+ .remember-me {
+  width: 100%;
+
+ }
+ 
+ .remember-me input {
+  position: relative;
+  right: 45%;
+  
+ }
+
+ .bg-image{
+  background-image: url(/img/oc.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  height: 600px;
+ }
