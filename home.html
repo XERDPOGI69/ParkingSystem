@@ -18,6 +18,10 @@
         <li class="btn-navbar" ><i class="fa-solid fa-check-to-slot"></i> <h1 id="slot"></h1> </li>
         <li class="btn-navbar" ><i class="fa-solid fa-gear"></i> <h1 id="settings"></h1> </li>
         </ul>
+        <ul class="logout">
+          <a href="index.html" style="text-decoration: none;"><li class="btn-out"><i class="fa-solid fa-right-from-bracket"></i><h1 id="logout"></h1></li></a>
+        </ul>
+      
     </div>
      </div>
      <script>
@@ -28,6 +32,7 @@
             const navb = document.querySelector('.navbar');
             const nav = document.querySelector('.nav');
             const btnNavbarElements = document.querySelectorAll('.btn-navbar');
+            const btnNavbarElement = document.querySelectorAll('.btn-out');
           
 
 openMenuButton.addEventListener('click', () => {
@@ -40,9 +45,16 @@ openMenuButton.addEventListener('click', () => {
   data.textContent = "";
   slot.textContent = "";
   settings.textContent = "";
+  logout.textContent = "";
   btnNavbarElements.forEach((btn) => {
     btn.style.justifyContent = 'center';
   });
+
+  btnNavbarElement.forEach((btn) => {
+    btn.style.justifyContent = 'center';
+  });
+
+
 
  
 
@@ -56,10 +68,15 @@ closeMenuButton.addEventListener('click', () => {
   create.textContent = "Create";
   data.textContent = "Data";
   slot.textContent = "Slot";
+  logout.textContent = "Log-out";
   settings.textContent = "Settings";
   navb.style.width = "300px";
   nav.style.width = "300px";
   btnNavbarElements.forEach((btn) => {
+    btn.style.justifyContent = 'start';
+  });
+
+  btnNavbarElement.forEach((btn) => {
     btn.style.justifyContent = 'start';
   });
 
